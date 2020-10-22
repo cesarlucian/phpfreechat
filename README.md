@@ -1,58 +1,52 @@
-# Installation quickstart
+# Início rápido de instalação
 
-## Prerequisites
+## Pré-requisitos
 
-  * Web browser compatible with JQuery (almost all !)
-  * A server with:
-    * php >= 5.3.0 ([Slim framework](https://github.com/codeguy/Slim/blob/master/README.markdown#system-requirements) dependency)
-    * apache server with mod_rewrite and .htaccess enabled (AllowOverride All)
-    * write access to the phpfreechat-2.1.1/server/data/ and phpfreechat-2.1.1/server/log/ folder (777 or write permission for the web server)
-  * No database needed !
+  * Navegador compatível com JQuery (quase todos!)
+  * Um servidor com:
+    * php> = 5.3.0 ([estrutura Slim](https://github.com/codeguy/Slim/blob/master/README.markdown#system-requirements) dependência)
+    * servidor apache com mod_rewrite e .htaccess habilitado (AllowOverride All)
+    * acesso de gravação a phpfreechat-2.1.1 / server / data / e phpfreechat-2.1.1 / server / log / pasta (777 ou permissão de gravação para o servidor web)
+  * Nenhum banco de dados necessário!
 
-## Quick start
+## Começo rápido
 
-Download [phpfreechat-2.1.1.zip](http://www.phpfreechat.net/download) and unzip it in the root folder of your Web server.
+Baixe [phpfreechat-2.1.1.zip](http://www.phpfreechat.net/download) e descompacte-o na pasta raiz do seu servidor web.
 
-JQuery should be included in your html `<head>` before the phpfreechat code:
-```html
-  <script src="/phpfreechat-2.1.1/client/lib/jquery-1.8.2.min.js" type="text/javascript"></script>
-```
+JQuery deve ser incluído em seu html `<head>` antes do código phpfreechat:
+`` `html
+  <script src = "/ phpfreechat-2.1.1 / client / lib / jquery-1.8.2.min.js" type = "text / javascript"> </script>
+`` `
+Inclua o plugin phpfreechat em seu html `<head>`:
+`` `html
+  <link rel = "stylesheet" type = "text / css" href = "/ phpfreechat-2.1.1 / client / themes / default / pfc.min.css" />
+  <script src = "/ phpfreechat-2.1.1 / client / pfc.min.js" type = "text / javascript"> </script>
+`` `
 
-Include the phpfreechat plugin in your html `<head>`:
-```html
-  <link rel="stylesheet" type="text/css" href="/phpfreechat-2.1.1/client/themes/default/pfc.min.css" />
-  <script src="/phpfreechat-2.1.1/client/pfc.min.js" type="text/javascript"></script>
-```
-
-Add this piece of HTML in your `<body>` where you want the chat to be displayed:
-```html
+Adicione este pedaço de HTML em seu `<body>` onde você deseja que o chat seja exibido:
+`` `html
 ...
-<div id="mychat"><a href="http://www.phpfreechat.net">Creating chat rooms everywhere - phpFreeChat</a></div>
+<div id = "mychat"> <a href="http://www.phpfreechat.net"> Criação de salas de bate-papo em qualquer lugar - phpFreeChat </a> </div>
 ...
-```
-
-Then add this piece of code just after (it will hook the chat on the page):
-```html
-<script type="text/javascript">
-  $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.1/server' });
+`` `
+Em seguida, adicione este trecho de código logo após (ele conectará o bate-papo na página):
+`` `html
+<script type = "text / javascript">
+  $ ('# mychat'). phpfreechat ({serverUrl: '/phpfreechat-2.1.1/server'});
 </script>
-```
-
-## Themes customization
-
-phpfreechat is released with few themes. You can choose which one you want to use:
-
+`` `
+## Personalização de temas
+phpfreechat é lançado com poucos temas. Você pode escolher qual deseja usar:
 * `default`
-* `carbon`
+* `carbono`
 * `gamer`
 * `phpfreechat`
 * `phpfreechat-mini`
-
-To select the theme, you only have to change one line in your html `<head>`. To use the `default` theme:
-```html
-  <link rel="stylesheet" type="text/css" href="/phpfreechat-2.1.1/client/themes/default/pfc.min.css" />
-```
-or this code for `carbon` theme:
-```html
-  <link rel="stylesheet" type="text/css" href="/phpfreechat-2.1.1/client/themes/carbon/pfc.min.css" />
-```
+Para selecionar o tema, você só precisa alterar uma linha em seu html `<head>`. Para usar o tema `default`:
+`` `html
+  <link rel = "stylesheet" type = "text / css" href = "/ phpfreechat-2.1.1 / client / themes / default / pfc.min.css" />
+`` `
+ou este código para o tema `carbon`:
+`` `html
+  <link rel = "stylesheet" type = "text / css" href = "/ phpfreechat-2.1.1 / client / themes / carbon / pfc.min.css" />
+`` `

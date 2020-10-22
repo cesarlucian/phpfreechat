@@ -17,5 +17,4 @@ before_script:
     - chmod 777 server/data/
     - curl http://127.0.0.1/check.php
     - curl http://127.0.0.1/server/status
-
 script: make test-server
