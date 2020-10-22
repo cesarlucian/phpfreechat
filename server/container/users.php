@@ -255,15 +255,11 @@ class Container_users {
 }
 
 function rrmdir($dir) {
-    $files_array=glob($dir . '/*');
-    
-    if(is_array($files_array) && count($files_array)>0){
-      foreach ($files_array as $file) {
-	  if(is_dir($file))
-	      rrmdir($file);
-	  else
-	      unlink($file);
-      }
+    foreach (glob($dir . '/*') as $file) {
+        if(is_dir($file))
+            rrmdir($file);
+        else
+            unlink($file);
     }
     rmdir($dir);
 }

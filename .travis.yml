@@ -4,7 +4,6 @@ php:
     - 5.3
  
 before_script:
-    - sudo apt-get update
     - sudo apt-get install apache2 libapache2-mod-php5
     - sudo a2enmod actions
     - sudo a2enmod rewrite
@@ -17,4 +16,5 @@ before_script:
     - chmod 777 server/data/
     - curl http://127.0.0.1/check.php
     - curl http://127.0.0.1/server/status
+
 script: make test-server
